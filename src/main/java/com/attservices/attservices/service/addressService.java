@@ -37,6 +37,11 @@ public class addressService {
 		return repo.findByZip(Zip);
 	}
 	
+	public List<address> readLine1Contains(String addressLike)
+	{
+		return repo.findByAddLineContains(addressLike);
+	}
+	
 	//U - UPDATE records
 	public address update(address add)
 	{
@@ -53,6 +58,12 @@ public class addressService {
 		}
 		return null;
 	}
+	
+	public int updateContains(String newAdd,String CheckSeq)
+	{
+		return repo.saveAddressContains(newAdd, CheckSeq);
+	}
+	
 	
 	//D - DELETE Records
 	public String delete(int id)

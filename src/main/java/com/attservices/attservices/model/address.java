@@ -40,7 +40,7 @@ public class address {
 	@Column(name="Zip")
 	private long zip;
 	
-	@Column(name="isActive")
-	private boolean isActive;
+	@Column(name="is_Active")
+	private boolean UserActive;
 	
 }
